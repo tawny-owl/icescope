@@ -1,20 +1,22 @@
 <!doctype html>
-<html lang="en" ng-app="eval">
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
-    <title>eval</title>
+    <title>Icescope</title>
+    <script type="text/javascript" src="http://cdn.icecomm.io/icecomm.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
 
     <script src="./app.js"></script>
+    <script src="./room.js"></script>
+
   </head>
 
-  <body>
-
+  <body ng-app="icescope">
     <ui-view/>
 
-    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./styles/style.css" rel="stylesheet" type="text/css"> -->
   </body>
 
 </html>

@@ -1,7 +1,7 @@
 angular
   .module('icescope', [
-    'icescope.home',
-    'icescope.code',
+    // 'icescope.home',
+    // 'icescope.code',
     'icescope.room',
     'ui.router'
   ])
@@ -12,13 +12,14 @@ angular
       url: '/',
       templateUrl: 'templates/home.html'
     })
-   .state('room', {
-      url: '/:roomID',
-      templateUrl: 'templates/room.html'
-   })
    .state('code', {
       url: '/code',
       templateUrl: 'templates/code.html',
+   })
+   .state('room', {
+      url: '/:roomID',
+      templateUrl: 'templates/room.html',
+      controller: 'roomController'
    });
 
   $urlRouterProvider.otherwise('/');
