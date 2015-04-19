@@ -1,4 +1,5 @@
-angular
+(function() {
+  angular
   .module('icescope', [
     // 'icescope.home',
     // 'icescope.code',
@@ -24,6 +25,7 @@ angular
 
   $urlRouterProvider.otherwise('/');
 }]);
+})();
 
 
 
