@@ -22,15 +22,12 @@ function roomController($stateParams) {
 
   var roomURL = $stateParams.roomID;
   var options = {};
-  // comm.connect('lobby', {stream: false}, function() {
-
-  //   console.log('domain', comm.getDomain());
-  //   if (comm.getDomain()[roomURL] && comm.getDomain()[roomURL].length !== 0) {
-  //     console.log('entering room');
-  //     options.stream = false;
-  //   }
-  //   comm.connect(roomURL, options)
-  // });
+  comm.connect('lobby', {stream: false}).then(function() {
+    if (comm.getDomain()[roomURL] && comm.getDomain()[roomURL].length !== 0) {
+      options.stream = false;
+    }
+    comm.connect(roomURL, options);
+  });
 
 }
 
