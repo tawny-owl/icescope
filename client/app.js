@@ -6,7 +6,14 @@
     'icescope.room',
     'ui.router'
   ])
-.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(['$stateProvider', 
+         '$locationProvider', 
+         '$urlRouterProvider', 
+         '$httpProvider', 
+  function($stateProvider, 
+          $locationProvider,
+          $urlRouterProvider, 
+          $httpProvider) {
 
   $stateProvider
     .state('home', {
@@ -20,10 +27,13 @@
    .state('room', {
       url: '/:roomID',
       templateUrl: 'templates/room.html',
-      controller: 'roomController'
+      controllerAs: 'room',
+      controller: 'RoomCtrl'
    });
-
+   console.log($locationProvider)
+  // $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
+
 }]);
 })();
 

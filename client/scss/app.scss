@@ -1,0 +1,45 @@
+.room {
+  .row {
+    width: 100%;
+    max-width: 100%;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    .columns {
+      &.right-panel {
+        padding: 50px;
+        background: #333;
+        height: 100%;
+        h1 {
+          /* H1 - I’m on the beach: */
+          font-family: HelveticaNeue;
+          font-size: 52px;
+          color: #FFFFFF;
+          line-height: 62px;
+          max-width: 80%;
+          padding-bottom: 30px;
+          /* Line: */
+          border-bottom: 1px #979797 solid;
+        }
+      }
+      &.video-panel {
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        img {
+          height: auto;
+          position: absolute;
+          min-width: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
