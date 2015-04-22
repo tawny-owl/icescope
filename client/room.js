@@ -1,41 +1,36 @@
 (function() {
-angular
-.module('icescope.room', [])
-.controller('roomController', roomController)
-.factory('roomFactory', roomFactory);
 
-function roomController($stateParams) {
+var comm = new Icecomm('3kB4PpZaNNFN4r3xhmOVgcPn2D8rzcOTtQFh4gRwmAsaGTPwlm', {debug: true});
 
-  window.comm = new Icecomm('3kB4PpZaNNFN4r3xhmOVgcPn2D8rzcOTtQFh4gRwmAsaGTPwlm');
+comm.on('local', function(peer) {
+  console.log('I AM BROADCASTING');
+});
 
-  comm.on('local', function(peer) {
-    console.log('I AM BROADCASTING');
-  });
+comm.on('connected', function(peer) {
+  console.log('connected');
+  console.log(peer);
+  console.log(peer.stream);
+  if (peer.stream) {
+    remote.src = peer.stream;
+  }
+});
 
-  comm.on('connected', function(peer) {
-    console.log('connected');
-    console.log(peer);
-    if (peer.stream) {
-      remote.src = peer.stream;
-    }
-  });
+var roomURL = window.location.pathname;
+var options = {
+  stream: false
+};
+comm.connect('lobby', {stream: false}).then(function() {
+  console.log('room size', comm.getDomain());
+  if (!comm.getDomain()[roomURL] || comm.getDomain()[roomURL].length === 0) {
+    console.log('setting stream to true');
+    options.stream = true;
+  }
+  console.log('options');
+  console.log(options);
+  // options.audio = false;
+  comm.connect(roomURL, options);
+});
 
-  var roomURL = $stateParams.roomID;
-  var options = {};
-  comm.connect('lobby', {stream: false}).then(function() {
-    if (comm.getDomain()[roomURL] && comm.getDomain()[roomURL].length !== 0) {
-      options.stream = false;
-    }
-    comm.connect(roomURL, options);
-  });
-
-}
-
-function roomFactory() {
-
-
-
-}
 })();
 
 
