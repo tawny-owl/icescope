@@ -16,6 +16,9 @@ comm.on('connected', function(peer) {
 });
 
 var roomURL = window.location.pathname;
+roomURL.title = roomURL.replace(/-/g, ' ');
+
+$('.room-name').text(roomURL)
 var options = {
   stream: false
 };
@@ -32,7 +35,3 @@ comm.connect('lobby', {stream: false}).then(function() {
 });
 
 })();
-
-
-
-

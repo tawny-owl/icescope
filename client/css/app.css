@@ -1,0 +1,276 @@
+@charset "UTF-8";
+.row {
+  font-size: 100%; }
+  @media all and (max-width: 1200px) {
+    .row {
+      font-size: 70%; } }
+  @media all and (max-width: 850px) {
+    .row {
+      font-size: 45%; } }
+
+@media all and (max-width: 960px) {
+  .top-bar-section a {
+    padding: 0 5px !important; } }
+
+.row {
+  width: 80%; }
+
+.hero {
+  padding-top: 9%;
+  padding-bottom: 5%; }
+  .hero a {
+    /* View the source: */
+    font-family: Monaco;
+    font-size: 15px;
+    color: #333333;
+    line-height: 25px;
+    border-bottom: #333 solid 1px; }
+  .hero > div:nth-of-type(1) {
+    margin-bottom: 30px; }
+  .hero .headline {
+    margin-bottom: 60px; }
+    .hero .headline h1 {
+      /* Live streaming in yo: */
+      font-family: Monaco;
+      font-size: 2em;
+      color: rgba(23, 23, 23, 0.77);
+      line-height: 50px;
+      letter-spacing: 0px; }
+  .hero .tryit h2 {
+    /* Try it out: */
+    font-family: Monaco;
+    font-size: 18px;
+    color: rgba(23, 23, 23, 0.77);
+    line-height: 25px; }
+  .hero .tryit .inputbox {
+    width: 70%;
+    position: relative;
+    height: 60px; }
+    @media all and (max-width: 540px) {
+      .hero .tryit .inputbox {
+        width: 100%; } }
+    .hero .tryit .inputbox input:nth-of-type(1) {
+      /* Rectangle 4: */
+      background: rgba(175, 175, 175, 0.18);
+      border-radius: 5px;
+      border: none;
+      position: absolute;
+      height: 40px; }
+      .hero .tryit .inputbox input:nth-of-type(1)::-webkit-input-placeholder {
+        /* What are you streami: */
+        font-family: OpenSans-Light;
+        font-size: 12px;
+        color: rgba(65, 65, 65, 0.77);
+        letter-spacing: 1px; }
+    .hero .tryit .inputbox input:nth-of-type(2) {
+      height: 40px;
+      width: 60px;
+      position: absolute;
+      right: 0;
+      /* Rectangle 5 Copy: */
+      background: #A873D1;
+      /* GO: */
+      font-family: OpenSans-Light;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.77);
+      line-height: 24px;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+
+.trending h2 {
+  /* Trending streams: */
+  font-family: Monaco;
+  font-size: 18px;
+  color: rgba(23, 23, 23, 0.77);
+  line-height: 25px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #515151;
+  margin-bottom: 15px; }
+
+.term, .term .chrome, .term .chrome {
+  border: solid 2px #F2F3F7; }
+
+.term {
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: left; }
+  .term .shell {
+    background: #FBFBFB;
+    min-height: 130px;
+    overflow: hidden; }
+  .term .chrome {
+    background: #F2F3F7;
+    height: 34px;
+    padding-left: 10px;
+    border-top: 0 none;
+    border-right: 0 none;
+    border-left: 0 none; }
+    .term .chrome .chromeLink {
+      width: 50%;
+      background: #fff;
+      position: absolute;
+      top: -1.5%;
+      left: 27%; }
+      .term .chrome .chromeLink a {
+        color: #766f79;
+        font-size: 12px; }
+    .term .chrome .btn {
+      display: inline-block;
+      vertical-align: middle;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      margin-top: -10px; }
+  .term .chrome:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .term .shell {
+    padding: 10px;
+    color: #777; }
+    .term .shell .slideInRightTop {
+      margin-top: 0 !important; }
+    .term .shell .slideInRightLast {
+      margin-bottom: 0 !important; }
+  .term .workshopper {
+    background: #F8F0BD;
+    padding: 2px; }
+
+code {
+  border: none;
+  font-size: 11px !important;
+  letter-spacing: 0.6px; }
+
+.term .workshopper code {
+  border: 0 none; }
+
+.term code {
+  display: block;
+  margin: 12px 0;
+  padding: 4px 10px;
+  border-radius: 0;
+  background: none; }
+
+.term .chrome .btn:hover {
+  border-color: #404040; }
+
+.term .chrome .btn.close {
+  background: #DF7065; }
+
+.term .chrome .btn.max {
+  background: #5BCC8B; }
+
+.term .chrome .btn.min {
+  background: #E6BB46; }
+
+.term.max {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: none; }
+
+.term.min {
+  position: absolute;
+  bottom: 0; }
+
+.term.min .shell {
+  min-height: 0;
+  height: 0;
+  padding: 0; }
+
+.term.min .chrome {
+  border: 0 none; }
+
+.light {
+  background: #5BCC8B;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  top: -26px;
+  left: 36px; }
+
+.room .row {
+  width: 100%;
+  max-width: 100%;
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .room .row .columns.right-panel {
+    padding: 50px;
+    height: 100%; }
+    .room .row .columns.right-panel .header .room-name {
+      /* H1 - I’m on the beach: */
+      font-family: OpenSans;
+      font-size: 40px;
+      color: #333333;
+      line-height: 55px;
+      max-width: 80%;
+      padding-bottom: 30px;
+      /* Line: */
+      border-bottom: 1px #979797 solid; }
+    .room .row .columns.right-panel .header .nav-links > a {
+      /* Start your own strea: */
+      font-family: OpenSans-Light;
+      font-size: 14px;
+      color: #333333;
+      line-height: 19px;
+      /* Line: */
+      border-bottom: 1px solid #333333; }
+  .room .row .columns.video-panel {
+    padding: 0;
+    height: 100%;
+    overflow: hidden; }
+    .room .row .columns.video-panel img {
+      height: auto;
+      position: absolute;
+      min-width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+
+.top-bar {
+  background: #fff;
+  padding: 10px 10% 0 10%; }
+  .top-bar .title-area {
+    flat: left; }
+  .top-bar .namelogo {
+    content: url("../assets/img/icecomm-logo-lg.png");
+    width: 180px;
+    padding-bottom: 20px; }
+  .top-bar .top-bar-section ul {
+    padding: 15px 0px 10px 0px;
+    width: auto;
+    height: auto !important;
+    display: inline; }
+    .top-bar .top-bar-section ul a {
+      font-family: 'Open Sans', sans-serif !important; }
+    .top-bar .top-bar-section ul.left {
+      padding-left: 30px; }
+  .top-bar .top-bar-section .hello-username a {
+    cursor: default; }
+    .top-bar .top-bar-section .hello-username a:hover {
+      background: #fff !important;
+      color: #333; }
+  .top-bar li:not(.has-form) a:not(.button) {
+    background: #fff;
+    color: #333; }
+
+.namelogo {
+  padding: 20px 0px 10px 0; }
+
+@media all and (max-width: 640px) {
+  .top-bar {
+    padding-bottom: 60px; } }
+
+/*# sourceMappingURL=app.css.map */
