@@ -16,6 +16,8 @@ comm.on('connected', function(peer) {
 });
 
 var roomURL = window.location.pathname;
+
+$('.room-name').text(roomURL)
 var options = {
   stream: false
 };
