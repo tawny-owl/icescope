@@ -10,73 +10,49 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-<<<<<<< HEAD
-  <head>
-    <meta charset="utf-8">
-    <!-- <base href="#"> -->
-    <title>Icescope</title>
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <!-- <script type="text/javascript" src="http://cdn-stag.icecomm.io/icecomm.js"></script> -->
-    <script type="text/javascript" src="http://cdn-stag.icecomm.io/icecomm.js"></script>
-    <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
-    <!-- <script type="text/javascript" src="http://192.168.1.183:8008/icecomm.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js"></script>
-    
-    <script src="./app.js"></script>
-    <script src="./room.js"></script>
-=======
   ga('create', 'UA-62121052-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 <body>
 <!-- Home -->
+<div class="row header">
+  <div class="small-6 large-6 columns">
+    <h1>Icescope</h1>
+  </div>
+  <div class="small-6 large-6 columns">
+    <!-- icescope logo -->
+  </div>
+</div>
+<div class="row hero">
+  <div class="small-12 large-6 columns">
+    <div>
+      <h1>Live streaming in your app</h1>
+      <h1>12 lines of code. No server</h1>
+    </div>
+    <div>
+      <!-- hidden on small -->
+      <a href="/code">View the source</a>
+    </div>
+    <div class="tryit">
+      <h2>Try it out</h2>
+      <input type="text" placehold="What are you streaming?">
+      <input type="submit" value="GO">
+      <a href="/signup">Get started with Icecomm</a>
+    </div>
+  </div>
+  <div>
+    <!-- hidden on small -->
+    <!-- Code block preview -->
+    <!-- Use same code as icecomm home -->
+  </div>
+</div>
+<div class="row trending">
+  <div class="large-12">
+    <h2>Trending streams</h2>
+  </div>
+  <div class="large"></div>
+</div>
 <!-- <a href="./code.html">See our code</a> -->
-<pre>
-var comm = new Icecomm('YOUR_API_KEY');
-var roomURL = window.location.pathname;
-var options = { stream: false };
->>>>>>> de77f2b9b90b8b010ff06949ce7576da291b02c3
 
-comm.on('connected', function(peer) {
-  if (peer.stream) {
-    remote.src = peer.stream;
-  }
-});
-
-<<<<<<< HEAD
-  <body ng-app="icescope">
-    <ui-view/>
-
-    <!-- <link href="./styles/style.css" rel="stylesheet" type="text/css"> -->
-  </body>
-  <script>
-    var socket = io();
-    console.log(socket)
-    socket.emit('chat message', 'hello world');
-    // $('form').submit(function(event) {
-    //     event.preventDefault();
-    //     socket.emit('chat message', $('.message-input').val());
-    //     $('.message-input').val('');
-    // });
-    socket.on('chat message', function(message) {
-      // $('.messages').append($('<li>').text(message));
-      console.log(message+1)
-    });
-</script>
-
-</html>
-=======
-comm.connect('lobby', options).then(function() {
-  if (!comm.getDomain()[roomURL] || comm.getDomain()[roomURL].length === 0) {
-    options.stream = true;
-  }
-  comm.connect(roomURL, options);
-});
-</pre>
 </body>
 </html>
->>>>>>> de77f2b9b90b8b010ff06949ce7576da291b02c3
